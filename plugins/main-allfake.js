@@ -194,3 +194,8 @@ const fvn = {
                         }
 	                  } 
                      }
+
+         global.fake = pickRandom([ ftroli, fkontak, fvn, ftextt, fliveLoc, ftoko, fdocs, fgclink, fgif ])
+		// Tambahin ya
+	}
+}
