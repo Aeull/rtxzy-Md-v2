@@ -435,7 +435,7 @@ module.exports = {
                     sPromote: '',
                     sDemote: '',
                     delete: true,
-                    antiLink: false,
+                    antiLink: true,
                     viewonce: false,
                     antiToxic: true,
                 }
@@ -708,7 +708,11 @@ module.exports = {
                         } finally {
                             text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Hi, Selamat Datang').replace('@subject', groupMetadata.subject).replace('@desc', groupMetadata.desc.toString()) :
                                 (chat.sBye || this.bye || conn.bye || 'Selamat tinggal'))
-                                this.sendButtonImg(id, pp, text, "Group Message", "OKE", "Ok", null)
+                                this.sendButtonImg(id, pp, text, "Group Message", "OKE", "Ok", null, { contextInfo: {
+                                externalAdReply :{
+                                showAdAttribution: true,
+                                }}
+                                })
                                 }
                     }
                 }
@@ -757,7 +761,7 @@ global.dfail = (type, m, conn) => {
         unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Mansur.16*',
         restrict: 'Fitur ini di *disable*!'
     }[type]
-    if (msg) return m.reply(msg)
+    if (msg) return conn.sendButton(m.chat, msg, wm, 'Owner', '.owner',m)
 }
 
 let fs = require('fs')
