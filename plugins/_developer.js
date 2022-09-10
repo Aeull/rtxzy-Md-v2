@@ -1,5 +1,5 @@
 let handler = async(m, { conn }) => {
-conn.sendContact(m.chat, numberowner, nameowner, m, { contextInfo: {
+conn.sendContact(m.chat, numberowner, nameowner, ftoko, { contextInfo: {
 externalAdReply :{
 showAdAttribution: true,
 }}})
