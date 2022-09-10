@@ -195,7 +195,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
 ], m
 )
     /*let url = `https://database.tioclkp02.repl.co/TextPro.me_162e2a76bb2460.jpg`.trim()
-    conn.sendHydrated(m.chat, text.trim(), '⫹⫺ TioXd', null, 'https://chat.whatsapp.com/JEDQfzMGZan4HA98wtxsNL', 'Group', '', '', [
+    conn.sendHydrated(m.chat, text.trim(), '⫹⫺ ArullBotz', null, 'https://chat.whatsapp.com/LHfAOQ4sa2g40Bu5sXDWva', 'Group', '', '', [
       ['Sewa Bot', '/sewa'],
       ['Owner', '/owner']
     ], m)*/
@@ -208,7 +208,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
                         hydratedTemplate: {
                             imageMessage: message.imageMessage, 
                             hydratedContentText: text.trim(),
-                            hydratedFooterText:'© All Rights Reserved | BOTCAHX',
+                            hydratedFooterText:'© ArullBotz ',
                             hydratedButtons: [{
                                 urlButton: {
                                     displayText: 'Website',
