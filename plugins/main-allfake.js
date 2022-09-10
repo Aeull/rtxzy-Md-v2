@@ -18,8 +18,8 @@ key: {
 						"mimetype": "image/jpeg",
 						"jpegThumbnail": fs.readFileSync('./media/siang.jpg') //Gambarnye
 					},
-					"title": "MikeBot", //Kasih namalu 
-					"description": "SELF BOT", 
+					"title": "ArullBotz", //Kasih namalu 
+					"description": "Bot", 
 					"currencyCode": "USD",
 					"priceAmount1000": "2000",
 					"retailerId": "Ghost",
@@ -39,7 +39,7 @@ const ftroli = {
                             itemCount : 1,
                             status: 1,
                             surface : 1,
-                            message: 'MikeBot', //Kasih namalu
+                            message: 'ArullBotz', //Kasih namalu
                             orderTitle: 'Bang',
                             thumbnail: fs.readFileSync('./media/siang.jpg'), //Gambarnye
                             sellerJid: '0@s.whatsapp.net'
@@ -54,7 +54,7 @@ const flokasi = {
                         },
        message: {
                     locationMessage: {
-                    name: 'Russia',
+                    name: 'Jepang',
                     jpegThumbnail: fs.readFileSync('./media/siang.jpg')
                           }
                         }
