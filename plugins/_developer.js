@@ -1,5 +1,8 @@
 let handler = async(m, { conn }) => {
-conn.sendContact(m.chat, numberowner, nameowner, m)
+conn.sendContact(m.chat, numberowner, nameowner, m, { contextInfo: {
+externalAdReply :{
+showAdAttribution: true,
+}}})
 }
 handler.help = ['owner', 'creator']
 handler.tags = ['info']
