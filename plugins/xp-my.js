@@ -5,7 +5,15 @@ let handler = async (m) => {
     else who = m.sender
     let user = global.db.data.users[who]
     let toos = fs.readFileSync('./media/bank.jpg')
-    let anu =`╭───❑ 「 BALANCE 」 ❑────
+    conn.relayMessage(m.chat,  {
+    requestPaymentMessage: {
+      currencyCodeIso4217: 'INR',
+      amount1000: 1339889,
+      requestFrom: m.sender,
+      noteMessage: {
+      extendedTextMessage: {
+      text: `
+╭───❑ 「 BALANCE 」 ❑────
 ├─ 📇 *Name*: ${user.name}
 ├─ 🆔 *Nomor* : ${require('awesome-phonenumber')(`+${m.sender.split('@')[0]}`).getNumber('international')}
 ├─ 🎨 *Age* : ${user.registered ? '' + user.age : ''}
@@ -16,8 +24,11 @@ let handler = async (m) => {
 ├─ 🎟 ️ *Limit Game* : ${user.glimit}
 ├─ 📊 *Level*: ${user.level}
 ╰─❑ ✨ *Exp*: ${user.exp}
-`
-    conn.sendButtonImg(m.chat, toos, anu, wm2, 'Inventory 🐦', '.inv', m) 
+`,
+      contextInfo: {
+      externalAdReply: {
+      showAdAttribution: true
+      }}}}}}, {})
 }
 handler.help = ['dompet', 'dompet @user', 'bank', 'bank @user']
 handler.tags = ['xp', 'rpg']
