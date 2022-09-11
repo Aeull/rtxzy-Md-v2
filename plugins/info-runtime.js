@@ -1,12 +1,22 @@
 let handler = async (m, { conn }) => {
     let _uptime = process.uptime() * 1000
     let uptime = clockString(_uptime)
-
-m.reply(`
-┌─〔 R U N T I M E 〕
+conn.relayMessage(m.chat,  {
+    requestPaymentMessage: {
+      currencyCodeIso4217: 'INR',
+      amount1000: 1339889,
+      requestFrom: m.sender,
+      noteMessage: {
+      extendedTextMessage: {
+      text: `
+┌─〔 *R U N T I M E* 〕
 ├ Bot Aktif Selama ${uptime}
 └────
-    `)
+`,
+      contextInfo: {
+      externalAdReply: {
+      showAdAttribution: true
+      }}}}}}, {})
 }
 handler.help = ['runtime']
 handler.tags = ['info']
