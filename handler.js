@@ -714,7 +714,7 @@ module.exports = {
                                 mediaUrl: global.web,
                                 mediaType: 2,
                                 title: global.namebot,
-                                thumbnail: "https://telegra.ph/file/0a932f7da9f506ff6c788.jpg",
+                                thumbnail: global.fotonya1,
                                 sourceUrl: global.web,
                                 }}
                                 })
