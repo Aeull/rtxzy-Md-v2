@@ -29,8 +29,8 @@ const listMessage = {
   sections
 }
 
-  if(!text) return conn.sendMessage(m.chat, listMessage, { quoted: ftoko })
-  if (!ar.includes(text)) throw conn.sendMessage(m.chat, listMessage, { quoted: ftoko })
+  if(!text) return conn.sendMessage(m.chat, listMessage, { quoted: m })
+  if (!ar.includes(text)) throw conn.sendMessage(m.chat, listMessage, { quoted: m })
   if (!res.ok) throw `${res.status} ${res.statusText}`
   let json = await res.json()
   if (!json.image) throw json
