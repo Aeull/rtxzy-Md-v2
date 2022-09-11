@@ -1,26 +1,37 @@
 let fs = require('fs')
-let handler = async (m, { conn }) => {
-let teks = 'donasi'
-let dana = global.dana
-let pulsa = global.pulsa
-let gopay = global.gopay
-let numberowner = global.numberowner
-let anu = `Hai 👋
-Kalian bisa mendukung saya agar bot ini tetap up to date dengan:
-┌〔 Donasi • Emoney 〕
-├ Dana : ${dana}
-├ Pulsa : ${pulsa}
-└────
-Berapapun donasi kalian akan sangat berarti 👍
-
-Terimakasih =D
-
-Contact person Owner:
-wa.me/${numberowner} (Owner)
-
-*donasi via follow ig juga boleh*`
-  conn.sendButtonImg(m.chat, fla + teks, anu, instagram, 'Thanks', 'thanks', m) 
+let handler = async (m, { conn, usedPrefix }) => { 
+      conn.relayMessage(m.chat,  {
+    requestPaymentMessage: {
+      currencyCodeIso4217: 'INR',
+      amount1000: 1339889,
+      requestFrom: m.sender,
+      noteMessage: {
+      extendedTextMessage: {
+      text: `
+╭─「 Donasi • Dana 」
+│ • im3 [085822347348]
+│ • axis  [083843192208]
+│ • Dana  [085822347348]
+│ • Saweria  [https://saweria.co/arullofc]
+╰────
+╭─「 *NOTE* 」
+│ > Ingin donasi? Wa.me/6285822347348
+│ _Hasil donasi akan digunakan buat sewa_
+│ _atau beli *RDP/VPS* agar bot bisa jalan_
+│ _24jam tanpa kendala_
+╰────
+`,
+      contextInfo: {
+      externalAdReply: {
+      showAdAttribution: true
+      }}}}}}, {})
 }
+handler.help = ['donasi']
+handler.tags = ['about']
+handler.command = /^dona(te|si)$/i
+
+module.exports = handler
+
 handler.help = ['donasi', 'donate']
 handler.tags = ['xp', 'info']
 handler.command = /^(donasi|donate)$/i
