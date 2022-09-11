@@ -23,7 +23,7 @@ const sections = [ {
 const listMessage = {
   text: sel,
   mentions: [m.sender],
-  footer: 'Jika menemukan bug,error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.',
+  footer: 'Saya Adalah Bot Muti Device,Yang Diaktifkan Oleh ARULL,Untuk Membantu Anda Memuat Sticker,Dll.',
   title: ras,
   buttonText: rs,
   sections
