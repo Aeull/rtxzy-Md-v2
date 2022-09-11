@@ -3,7 +3,7 @@ let handler  = async (m, { conn, text }) => {
   conn.reply(m.chat, `_Mengirim pesan broadcast ke ${chats.length} chat_`, m)
   for (let id of chats) {
        let bcbg = 'https://database.tioclkp02.repl.co/1920b808c70288df5bbe1.png'
-       await conn.send2Button(id, text.trim(), wm, 'Menu', '.menu', 'Owner', '.owner', null)
+       await conn.send2But(id, text.trim(), wm, 'Menu', '.menu', 'Owner', '.owner', null)
      }
   m.reply('*Broadcast selesai*')
 }
