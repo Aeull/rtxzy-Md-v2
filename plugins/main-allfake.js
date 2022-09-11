@@ -6,7 +6,7 @@
 */
 
 //----------[ FAKE TOKO ]--------//
-const ftoko = {
+global.ftoko = {
 key: {
 			fromMe: false,
 			participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "0@s.whatsapp.net" } : {})
@@ -30,7 +30,7 @@ key: {
 	}
 }
 //----------[ FAKE TROLI ]--------//
-const ftroli = {
+global.ftroli = {
 	key : {
                           participant : '0@s.whatsapp.net'
                         },
@@ -48,7 +48,7 @@ const ftroli = {
                         }
                       }
 //----------[ FAKE LOKASI ]--------//
-const flokasi = {
+global.flokasi = {
 	key : {
            participant : '0@s.whatsapp.net'
                         },
@@ -60,7 +60,7 @@ const flokasi = {
                         }
                       }
                       
-const floc = {
+global.floc = {
 	 key:
 	 { fromMe: false,
 	 participant: `0@s.whatsapp.net`, ...(m.chat ? 
@@ -68,7 +68,7 @@ const floc = {
 	 message: { "locationMessage": { "title":"jakarta","h": `aloo`, 'jpegThumbnail': fs.readFileSync('./media/siang.jpg')}}
 	}
 	
-const fliveLoc = {
+global.fliveLoc = {
 	 key:
 	 { fromMe: false,
 	 participant: `0@s.whatsapp.net`, ...(m.chat  ? 
@@ -83,7 +83,7 @@ const fliveLoc = {
 	 message: { "liveLocationMessage": { "title": "ANTIBOT","h": `aloo`, 'jpegThumbnail': fs.readFileSync('./media/siang.jpg')}}
 	}
 //FAKEREPLY KONTAK
- const fcon = {
+ global.fcon = {
 	 key:
 	 { fromMe: false,
 	 participant: `0@s.whatsapp.net`, ...(m.chat ? 
@@ -91,7 +91,7 @@ const fliveLoc = {
 	 message: { "contactMessage": { "title":"sri","h": `haloo`, 'jpegThumbnail': fs.readFileSync('./media/siang.jpg')}}
 	}
 	
-	const fcona = {
+	global.fcona = {
 	 key:
 	 { fromMe: false,
 	 participant: `0@s.whatsapp.net`, ...(m.chat ? 
@@ -101,7 +101,7 @@ const fliveLoc = {
 	const bugcon = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "status@broadcast" } : {}) }, message: { "contactMessage": { "vcard": ""}}}
 	
 //----------[ FAKE DOC ]--------//
-const fdocs = {
+global.fdocs = {
 	key : {
            participant : '0@s.whatsapp.net'
                         },
@@ -113,7 +113,7 @@ const fdocs = {
                         }
                       }
 //----------[ FAKE VIDEO ]--------//
-const fvideo = {
+global.fvideo = {
 	 key: { 
           fromMe: false,
 	      participant: `0@s.whatsapp.net`, ...(m.chat ? 
@@ -130,7 +130,7 @@ const fvideo = {
                        }
 	                  }
 //----------[ FAKE GC ]--------//
-const fgclink = {
+global.fgclink = {
 	"key": {
 		"fromMe": false,
 		"participant": "0@s.whatsapp.net",
@@ -147,7 +147,7 @@ const fgclink = {
 	}
 }
 //----------[ FAKE GIF  ]--------//
-const fgif = {
+global.fgif = {
 	 key: { 
           fromMe: false,
 	      participant: `0@s.whatsapp.net`, ...(m.chat ? 
@@ -165,7 +165,7 @@ const fgif = {
                        }
 	                  } 
 //----------[ FAKE TEXT  ]--------//
-const ftextt = {
+global.ftextt = {
 	 key: { 
           fromMe: false,
 	      participant: `0@s.whatsapp.net`, ...(m.chat ? 
@@ -180,7 +180,7 @@ const ftextt = {
 	                  } 
                      }
 //----------[ FAKE VN  ]--------//
-const fvn = {
+global.fvn = {
 	 key: { 
           fromMe: false,
 	      participant: `0@s.whatsapp.net`, ...(m.chat ? 
