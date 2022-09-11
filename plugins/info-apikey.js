@@ -1,4 +1,12 @@
-let handler = async m => m.reply(`
+let handler = async m => {
+conn.relayMessage(m.chat,  {
+    requestPaymentMessage: {
+      currencyCodeIso4217: 'INR',
+      amount1000: 1339889,
+      requestFrom: m.sender,
+      noteMessage: {
+      extendedTextMessage: {
+      text: `
 ┌─〔 *APIKEY FREE* 〕
 ├➥ *Bany :* adadeh
 ├➥ *leyscoders:* MIMINGANZ
@@ -31,7 +39,12 @@ let handler = async m => m.reply(`
 ┃ > *Trimakasih Telah Membantu*
 ┃ *Jalanya Bot Ini :)*
 ┗━━━━━━━━━━━━━━━━
-`.trim()) // Tambah sendiri kalo mau
+`,
+      contextInfo: {
+      externalAdReply: {
+      showAdAttribution: true
+      }}}}}}, {})
+}
 handler.help = ['apikey']
 handler.tags = ['info']
 handler.command = /^apikey$/i
