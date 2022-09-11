@@ -711,6 +711,10 @@ module.exports = {
                                 this.sendButtonImg(id, pp, text, "Group Message", "Tampilan Menu", ".menu", null, { contextInfo: {
                                 externalAdReply :{
                                 showAdAttribution: true,
+                                mediaUrl: global.web,
+                                mediaType: 2,
+                                title: global.namebot,
+                                sourceUrl: global.web,
                                 }}
                                 })
                                 }
