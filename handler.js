@@ -711,6 +711,10 @@ module.exports = {
                                 this.sendButtonImg(id, pp, text, "Group Message", "OKE", "Ok", null, { contextInfo: {
                                 externalAdReply :{
                                 showAdAttribution: true,
+                                body: wm,
+                                mediaUrl: web,
+                                mediaType: 2,
+                                sourceUrl: true,
                                 }}
                                 })
                                 }
