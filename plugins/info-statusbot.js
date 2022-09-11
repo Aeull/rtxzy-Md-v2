@@ -3,8 +3,14 @@ let handler = async (m, { conn }) => {
     let wm = global.wm
     let _uptime = process.uptime() * 1000
     let uptime = clockString(_uptime)
-
-    let str = `
+conn.relayMessage(m.chat,  {
+    requestPaymentMessage: {
+      currencyCodeIso4217: 'INR',
+      amount1000: 1339889,
+      requestFrom: m.sender,
+      noteMessage: {
+      extendedTextMessage: {
+      text: `
 ╭─────[ *Status* ]────✧
 ├◌ Aktif selama ${uptime}
 ├◌ Mode : ${global.opts['self'] ? 'Self' : 'publik'}
@@ -12,9 +18,11 @@ let handler = async (m, { conn }) => {
 ├◌ ${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length} Chat Terbanned
 ├◌ ${Object.entries(global.db.data.users).filter(user => user[1].banned).length} Pengguna Terbanned
 ╰────────────···
-    `.trim()
-conn.send2But(m.chat, str, wm, 'Speed', '.speed', 'Owner', '.owner',m)
-conn.reply(str)
+`,
+      contextInfo: {
+      externalAdReply: {
+      showAdAttribution: true
+      }}}}}}, {})
 }
 handler.help = ['botstatus']
 handler.tags = ['info']
