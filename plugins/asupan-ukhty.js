@@ -1,9 +1,14 @@
-let handler = async(m,{text, conn}) => {
-let supa = 'https://api.zacros.my.id/asupan/ukhty'
-conn.sendFile(m.chat, supa, null, 'Nih', m)
+let fetch = require('node-fetch')
+let handler = async(m, { conn, usedPrefix, command }) => {
+  let res = await fetch('https://raw.githubusercontent.com/binjaicity/warga62/master/ukhty.json')
+  //if (!res.ok) throw await res.json()
+  let asup = await res.json()
+  let json = asup[Math.floor(Math.random() * asup.length)]
+  //if (!json.url) throw 'Error!'
+  conn.sendButtonVid(m.chat, json.url, command, wm, command, `${usedPrefix} command`, m)
 }
 handler.help = ['ukhty']
 handler.tags = ['asupan']
 handler.command = /^(ukhty)$/i
-
+//MADE IN ERPAN 1140 BERKOLABORASI DENGAN BTS
 module.exports = handler
