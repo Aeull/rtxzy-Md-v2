@@ -708,16 +708,7 @@ module.exports = {
                         } finally {
                             text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Hi, Selamat Datang').replace('@subject', groupMetadata.subject).replace('@desc', groupMetadata.desc.toString()) :
                                 (chat.sBye || this.bye || conn.bye || 'Selamat tinggal'))
-                                this.sendButtonImg(id, pp, text, "Group Message", "Tampilan Menu", ".menu", null, { contextInfo: {
-                                externalAdReply :{
-                                showAdAttribution: true,
-                                mediaUrl: global.web,
-                                mediaType: 2,
-                                title: global.namebot,
-                                thumbnail: global.fotonya1,
-                                sourceUrl: global.web,
-                                }}
-                                })
+                                this.send2ButtonImg(id, pp, text, "Group Message", "Tampilan Menu", ".menu", 'Owner', '.owner', null)
                                 }
                     }
                 }
