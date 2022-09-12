@@ -1,12 +1,5 @@
-/*
- * Hyzer Baik :) 
- * Wkwkk Ini Cuman Buat Pelengkap Doang
- * Bukan Bagian Dari Fitur Deck
- * Sumimasen >,<
-*/
-
 //----------[ FAKE TOKO ]--------//
-global.ftoko = {
+const ftoko = {
 key: {
 			fromMe: false,
 			participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "0@s.whatsapp.net" } : {})
@@ -18,8 +11,8 @@ key: {
 						"mimetype": "image/jpeg",
 						"jpegThumbnail": fs.readFileSync('./media/siang.jpg') //Gambarnye
 					},
-					"title": "ArullBotz", //Kasih namalu 
-					"description": "Bot", 
+					"title": "MikeBot", //Kasih namalu 
+					"description": "SELF BOT", 
 					"currencyCode": "USD",
 					"priceAmount1000": "2000",
 					"retailerId": "Ghost",
@@ -30,7 +23,7 @@ key: {
 	}
 }
 //----------[ FAKE TROLI ]--------//
-global.ftroli = {
+const ftroli = {
 	key : {
                           participant : '0@s.whatsapp.net'
                         },
@@ -39,7 +32,7 @@ global.ftroli = {
                             itemCount : 1,
                             status: 1,
                             surface : 1,
-                            message: 'ArullBotz', //Kasih namalu
+                            message: 'MikeBot', //Kasih namalu
                             orderTitle: 'Bang',
                             thumbnail: fs.readFileSync('./media/siang.jpg'), //Gambarnye
                             sellerJid: '0@s.whatsapp.net'
@@ -48,19 +41,19 @@ global.ftroli = {
                         }
                       }
 //----------[ FAKE LOKASI ]--------//
-global.flokasi = {
+const flokasi = {
 	key : {
            participant : '0@s.whatsapp.net'
                         },
        message: {
                     locationMessage: {
-                    name: 'Jepang',
+                    name: 'Russia',
                     jpegThumbnail: fs.readFileSync('./media/siang.jpg')
                           }
                         }
                       }
                       
-global.floc = {
+const floc = {
 	 key:
 	 { fromMe: false,
 	 participant: `0@s.whatsapp.net`, ...(m.chat ? 
@@ -68,7 +61,7 @@ global.floc = {
 	 message: { "locationMessage": { "title":"jakarta","h": `aloo`, 'jpegThumbnail': fs.readFileSync('./media/siang.jpg')}}
 	}
 	
-global.fliveLoc = {
+const fliveLoc = {
 	 key:
 	 { fromMe: false,
 	 participant: `0@s.whatsapp.net`, ...(m.chat  ? 
@@ -83,7 +76,7 @@ global.fliveLoc = {
 	 message: { "liveLocationMessage": { "title": "ANTIBOT","h": `aloo`, 'jpegThumbnail': fs.readFileSync('./media/siang.jpg')}}
 	}
 //FAKEREPLY KONTAK
- global.fcon = {
+ const fcon = {
 	 key:
 	 { fromMe: false,
 	 participant: `0@s.whatsapp.net`, ...(m.chat ? 
@@ -91,7 +84,7 @@ global.fliveLoc = {
 	 message: { "contactMessage": { "title":"sri","h": `haloo`, 'jpegThumbnail': fs.readFileSync('./media/siang.jpg')}}
 	}
 	
-	global.fcona = {
+	const fcona = {
 	 key:
 	 { fromMe: false,
 	 participant: `0@s.whatsapp.net`, ...(m.chat ? 
@@ -101,7 +94,7 @@ global.fliveLoc = {
 	const bugcon = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "status@broadcast" } : {}) }, message: { "contactMessage": { "vcard": ""}}}
 	
 //----------[ FAKE DOC ]--------//
-global.fdocs = {
+const fdocs = {
 	key : {
            participant : '0@s.whatsapp.net'
                         },
@@ -113,7 +106,7 @@ global.fdocs = {
                         }
                       }
 //----------[ FAKE VIDEO ]--------//
-global.fvideo = {
+const fvideo = {
 	 key: { 
           fromMe: false,
 	      participant: `0@s.whatsapp.net`, ...(m.chat ? 
@@ -130,7 +123,7 @@ global.fvideo = {
                        }
 	                  }
 //----------[ FAKE GC ]--------//
-global.fgclink = {
+const fgclink = {
 	"key": {
 		"fromMe": false,
 		"participant": "0@s.whatsapp.net",
@@ -147,7 +140,7 @@ global.fgclink = {
 	}
 }
 //----------[ FAKE GIF  ]--------//
-global.fgif = {
+const fgif = {
 	 key: { 
           fromMe: false,
 	      participant: `0@s.whatsapp.net`, ...(m.chat ? 
@@ -165,7 +158,7 @@ global.fgif = {
                        }
 	                  } 
 //----------[ FAKE TEXT  ]--------//
-global.ftextt = {
+const ftextt = {
 	 key: { 
           fromMe: false,
 	      participant: `0@s.whatsapp.net`, ...(m.chat ? 
@@ -180,7 +173,7 @@ global.ftextt = {
 	                  } 
                      }
 //----------[ FAKE VN  ]--------//
-global.fvn = {
+const fvn = {
 	 key: { 
           fromMe: false,
 	      participant: `0@s.whatsapp.net`, ...(m.chat ? 
@@ -194,8 +187,3 @@ global.fvn = {
                         }
 	                  } 
                      }
-
-         global.fake = pickRandom([ ftroli, fkontak, fvn, ftextt, fliveLoc, ftoko, fdocs, fgclink, fgif ])
-		// Tambahin ya
-	}
-}
